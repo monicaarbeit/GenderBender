@@ -4,7 +4,9 @@
  "description": "Changing the way the web assumes gender",
  "version": "1",
  "content_scripts": [ {
- 	// "js": ["content.js"],
+ 	"matches": ["http://*/*",
+ 				"https://*/*"],
+ 	"js": ["content.js"],
  	"run_at": "document_end"
  } ],
  "author": "EJM",
