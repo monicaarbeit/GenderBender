@@ -1,0 +1,21 @@
+{
+ "manifest_version": 2,
+ "name": "Gender Bender",
+ "description": "Changing the way the web assumes gender",
+ "version": "1",
+ "content_scripts": [ {
+ 	// "js": ["content.js"],
+ 	"run_at": "document_end"
+ } ],
+ "author": "EJM",
+
+"browser_action": {
+   "default_icon": "ocean.jpg",
+   "default_title": "Gender Bender"
+ },
+
+"chrome_url_overrides" : {
+  "newtab": "home_page.html"
+},
+ "permissions": ["activeTab"]
+}
