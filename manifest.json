@@ -1,6 +1,6 @@
 {
  "manifest_version": 2,
- "name": "Gender Bender",
+ "name": "Gender Ender",
  "description": "Changing the way the web assumes gender",
  "version": "1",
  "content_scripts": [ {
@@ -13,7 +13,7 @@
 
 "browser_action": {
    "default_icon": "ocean.jpg",
-   "default_title": "Gender Bender"
+   "default_title": "Gender Ender"
  },
 
 "chrome_url_overrides" : {
