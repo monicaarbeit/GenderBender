@@ -40,6 +40,10 @@ function handleText(textNode)
     v = v.replace(/\bHe\b/g, "They");
     v = v.replace(/\bhim\b/g, "them");
     v = v.replace(/\bHim\b/g, "Them");
+    v = v.replace(/\bhimself\b/g, "themself");
+    v = v.replace(/\bHimself\b/g, "Themself");
+    v = v.replace(/\bherself\b/g, "themself");
+    v = v.replace(/\bHerself\b/g, "Themself");
 
     //possisive pronouns 
     v = v.replace(/\bhers\b/g, "theirs");
@@ -64,6 +68,12 @@ function handleText(textNode)
     v = v.replace(/\bBoy\b/g, "Person");
     v = v.replace(/\bboys\b/g, "people");
     v = v.replace(/\bBoys\b/g, "People");
+    v = v.replace(/\bguy\b/g, "person");
+    v = v.replace(/\bGuy\b/g, "Person");
+    v = v.replace(/\bguys\b/g, "people");
+    v = v.replace(/\bGuys\b/g, "People");
+    v = v.replace(/\bladies\b/g, "people");
+    v = v.replace(/\bLadies\b/g, "People");
 
     //relational nouns
     v = v.replace(/\bdaughter\b/g, "child");
@@ -143,7 +153,68 @@ function handleText(textNode)
     v = v.replace(/\bMs\.?b/g, "Mx");
     v = v.replace(/\bMiss\.?b/g, "Mx");
     v = v.replace(/\bMister\.?b/g, "Mx");
-	
+    v = v.replace(/\bSir/g, "Honorary");
+    v = v.replace(/\bMadam/g, "Honorary");
+
+    //other general nouns 
+    v = v.replace(/\bcongressman\b/g, "congressperson");
+    v = v.replace(/\bCongressman\b/g, "Congressperson");
+    v = v.replace(/\bcongresswoman\b/g, "congressperson");
+    v = v.replace(/\bCongresswoman\b/g, "Congressperson");
+    
+    v = v.replace(/\bqueen\b/g, "monarch");
+    v = v.replace(/\bQueen\b/g, "Monarch");
+    v = v.replace(/\bqueens\b/g, "monarchs");
+    v = v.replace(/\bQueens\b/g, "Monarchs");
+    v = v.replace(/\bking\b/g, "monarch");
+    v = v.replace(/\bKing\b/g, "Monarch");
+    v = v.replace(/\bkings\b/g, "monarchs");
+    v = v.replace(/\bKings\b/g, "Monarchs");
+
+    v = v.replace(/\bprince\b/g, "monarch's child");
+    v = v.replace(/\bPrince\b/g, "Monarch's Child");
+    v = v.replace(/\bprinces\b/g, "monarch's children");
+    v = v.replace(/\bPrinces\b/g, "Monarch's Children");
+
+    v = v.replace(/\bprincess\b/g, "monarch's child");
+    v = v.replace(/\bPrincess\b/g, "Monarch's Child");
+    v = v.replace(/\bprincesses\b/g, "monarch's children");
+    v = v.replace(/\bPrincesses\b/g, "Monarch's Children");
+
+    v = v.replace(/\bmankind\b/g, "humankind");
+    v = v.replace(/\bMankind\b/g, "Humankind");
+    v = v.replace(/\bchairman\b/g, "chairperson");
+    v = v.replace(/\bChairman\b/g, "Chairperson");
+    v = v.replace(/\bchairwoman\b/g, "chairperson");
+    v = v.replace(/\bChairwoman\b/g, "Chairperson");
+    v = v.replace(/\bchairmen\b/g, "chairpeople");
+    v = v.replace(/\bChairmen\b/g, "Chairpeople");
+    v = v.replace(/\bChairwomen\b/g, "Chairpeople");
+
+    v = v.replace(/\bgunman\b/g, "gunperson");
+    v = v.replace(/\bGunman\b/g, "Gunperson");
+    v = v.replace(/\bgunwoman\b/g, "gunperson");
+    v = v.replace(/\bGunwoman\b/g, "Gunperson");
+
+    v = v.replace(/\balumnae\b/g, "alumnus");
+    v = v.replace(/\bAlumnae\b/g, "Alumnus");
+    v = v.replace(/\bwaitress\b/g, "waiter");
+    v = v.replace(/\bWaitress\b/g, "Waiter");
+    v = v.replace(/\bactress\b/g, "actor");
+    v = v.replace(/\bActress\b/g, "Actor");
+    v = v.replace(/\bhostess\b/g, "host");
+    v = v.replace(/\bHostess\b/g, "Host");
+
+    v = v.replace(/\bfreshman\b/g, "first-year student");
+    v = v.replace(/\bFreshman\b/g, "First-year student");
+    v = v.replace(/\b"man-made"\b/g, "synthetic");
+    v = v.replace(/\b"Man-made"\b/g, "Synthetic");
+
+    v = v.replace(/\b"policeman"\b/g, "police officer");
+    v = v.replace(/\b"Policeman"\b/g, "Police officer");
+    v = v.replace(/\b"policewoman"\b/g, "police officer");
+    v = v.replace(/\b"Policewoman"\b/g, "Police officer");
+
 
     textNode.nodeValue = v;
 }
