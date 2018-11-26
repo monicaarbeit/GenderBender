@@ -34,10 +34,18 @@ function handleText(textNode)
     // personal pronouns 
     v = v.replace(/\bshe\b/g, "they");
     v = v.replace(/\bShe\b/g, "They");
+    v = v.replace(/\bshe is\b/g, "they are");
+    v = v.replace(/\bShe is\b/g, "They are");
+    v = v.replace(/\bshe was\b/g, "they were");
+    v = v.replace(/\bShe was\b/g, "They were");
     v = v.replace(/\bher\b/g, "their");
     v = v.replace(/\bHer\b/g, "Their");
     v = v.replace(/\bhe\b/g, "they");
     v = v.replace(/\bHe\b/g, "They");
+    v = v.replace(/\bhe\b/g, "they are");
+    v = v.replace(/\bHe\b/g, "They are");
+    v = v.replace(/\bhe\b/g, "they were");
+    v = v.replace(/\bHe\b/g, "They were");
     v = v.replace(/\bhim\b/g, "them");
     v = v.replace(/\bHim\b/g, "Them");
     v = v.replace(/\bhimself\b/g, "themself");
@@ -45,11 +53,18 @@ function handleText(textNode)
     v = v.replace(/\bherself\b/g, "themself");
     v = v.replace(/\bHerself\b/g, "Themself");
 
+    //contractions 
+    v = v.replace(/\bhe's\b/g, "they're");
+    v = v.replace(/\bHe's\b/g, "They're");
+    v = v.replace(/\bshe's\b/g, "they're");
+    v = v.replace(/\bShe's\b/g, "They're");
+
+
     //possisive pronouns 
     v = v.replace(/\bhers\b/g, "theirs");
     v = v.replace(/\bHers\b/g, "Theirs");
     v = v.replace(/\bhis\b/g, "their");
-    v = v.replace(/\bHis\b/g, "their");
+    v = v.replace(/\bHis\b/g, "Their");
 
     //nouns 
     v = v.replace(/\bman\b/g, "person");
@@ -215,6 +230,17 @@ function handleText(textNode)
     v = v.replace(/\b"policewoman"\b/g, "police officer");
     v = v.replace(/\b"Policewoman"\b/g, "Police officer");
 
+    v = v.replace(/\b"nun"\b/g, "clergyperson");
+    v = v.replace(/\b"nuns"\b/g, "clergypeople");
+    v = v.replace(/\b"Nun"\b/g, "clergyperson");
+    v = v.replace(/\b"Nuns"\b/g, "clergypeople");
+
+    v = v.replace(/\b"bride"\b/g, "newlywed");
+    v = v.replace(/\b"brides"\b/g, "newlyweds");
+    v = v.replace(/\b"Bride"\b/g, "Newlywed");
+    v = v.replace(/\b"groom"\b/g, "newlywed");
+    v = v.replace(/\b"groom"\b/g, "newlyweds");
+    v = v.replace(/\b"Groom"\b/g, "Newlywed");
 
     textNode.nodeValue = v;
 }
