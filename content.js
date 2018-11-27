@@ -105,9 +105,13 @@ function handleText(textNode)
     v = v.replace(/\bhusband\b/g, "spouse");
     v = v.replace(/\bHusband\b/g, "Spouse");
     v = v.replace(/\bgirlfriend\b/g, "partner");
+    v = v.replace(/\bgirlfriends\b/g, "partners"); /* can also sometimes be friends */
     v = v.replace(/\bGirlfriend\b/g, "Partner");
+    v = v.replace(/\bGirlfriends\b/g, "Partners");
     v = v.replace(/\bboyfriend\b/g, "partner");
+    v = v.replace(/\bboyfriends\b/g, "partners");
     v = v.replace(/\bBoyfriend\b/g, "Partner");
+    v = v.replace(/\bBoyfriends\b/g, "Partners");
 
     v = v.replace(/\bmother\b/g, "parent");
     v = v.replace(/\bmothers\b/g, "parents");
