@@ -90,6 +90,15 @@ function handleText(textNode)
     v = v.replace(/\bladies\b/g, "people");
     v = v.replace(/\bLadies\b/g, "People");
 
+
+    v = v.replace(/\bdude\b/g, "person");
+    v = v.replace(/\bDude\b/g, "Person");
+    v = v.replace(/\bgal\b/g, "person");
+    v = v.replace(/\bGal\b/g, "Person");
+    
+    v = v.replace(/\b([Ff]e)?[Mm]ale\b/g, " "); /* replace female, male with blank */
+
+
     //relational nouns
     v = v.replace(/\bdaughter\b/g, "child");
     v = v.replace(/\bDaughter\b/g, "Child");
