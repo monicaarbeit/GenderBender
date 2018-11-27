@@ -1,4 +1,11 @@
 body {
-	background: #263238;
+	background: black;
+}
+
+h1 {
 	color: white;
+}
+
+.row {
+	padding: 15px;
 }
