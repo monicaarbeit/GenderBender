@@ -12,12 +12,19 @@
  "author": "EJM",
 
 "browser_action": {
-   "default_icon": "ocean.jpg",
+   "default_icon": "trans.png",
    "default_title": "Gender Ender"
  },
+
+"icons": { "16": "trans16.png",
+		   "48": "trans48.png",
+		   "128": "trans128.png"
+},
 
 "chrome_url_overrides" : {
   "newtab": "home_page.html"
 },
- "permissions": ["activeTab"]
+ "permissions": ["https://www.sfchronicle.com/local/bayarea/",
+ 				"https://www.latimes.com/",
+ 				"http://www.staradvertiser.com/"]
 }
